@@ -3,5 +3,5 @@ cd /lonp
 curl -sSL https://github.com/HelloZeroNet/ZeroNet/archive/master.tar.gz -o new.tar.gz
 tar -zxvf new.tar.gz
 cd Zero*
-python2 zeronet.py --ui_ip * --tor disable 
+python2 zeronet.py  --tor disable 
 while :; do sleep 31104000 ; done
