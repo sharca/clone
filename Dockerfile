@@ -10,6 +10,6 @@ WORKDIR /lonp
 #ENTRYPOINT /entrypoint.sh
 CMD /inits
 # EXPOSE 41022 13943
-
+EXPOSE 8080
 
 
