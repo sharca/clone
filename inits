@@ -1,6 +1,6 @@
 #!/bin/bash
 cd /lonp
-if [-e ZeroNet-master]
+if [ -e ZeroNet-master]
 then
 cd Zero*
 
