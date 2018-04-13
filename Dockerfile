@@ -1,5 +1,5 @@
 FROM base/archlinux
-
+ENV PASS=none
 RUN pacman -Syu --noconfirm && pacman -S bash unzip nano tor python2-gevent python2-msgpack python2-pyopenssl --noconfirm && paccache -r -k 0
 ADD inits /inits
 RUN chmod +x /inits
