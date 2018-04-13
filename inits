@@ -1,7 +1,15 @@
 #!/bin/bash
 cd /lonp
+if [-e ZeroNet-master]
+then
+cd Zero*
+
+python2 zeronet.py  --tor disable --ui_ip "*"  --ui_port $PORT --ui_password $PASS
+
+else
 curl -sSL https://github.com/HelloZeroNet/ZeroNet/archive/master.tar.gz -o new.tar.gz
 tar -zxvf new.tar.gz
 cd Zero*
-python2 zeronet.py  --tor disable --ui_ip "*"  --ui_port $PORT
+mv  ./plugins/disabled-UiPassword ./plugins/UiPassword
+python2 zeronet.py  --tor disable --ui_ip "*"  --ui_port $PORT --ui_password $PASS
 while :; do sleep 31104000 ; done
