@@ -1,12 +1,18 @@
 #!/bin/bash
-cd /lonp
+ls
+
+sleep 10 
+
 if [ -e ZeroNet-master ]
+
 then
-cd Zero*
+
+cd ZeroNet-master
 
 python2 zeronet.py  --tor disable --ui_ip "*"  --ui_port $PORT --ui_password $PASS
 
 else
+
 curl -sSL https://github.com/HelloZeroNet/ZeroNet/archive/master.tar.gz -o new.tar.gz
 tar -zxvf new.tar.gz
 cd Zero*
