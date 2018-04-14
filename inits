@@ -1,12 +1,5 @@
 #!/bin/bash
-ls
-mkdir temp
 
-sleep 10
-
-ls
-
-sleep 10 
 
 if [ -e ZeroNet-master ]
 
