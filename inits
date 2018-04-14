@@ -1,5 +1,10 @@
 #!/bin/bash
 ls
+mkdir temp
+
+sleep 10
+
+ls
 
 sleep 10 
 
