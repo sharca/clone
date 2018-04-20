@@ -1,21 +1,11 @@
 #!/bin/bash
 
 
-if [ -e ZeroNet-master ]
 
-then
 
-cd ZeroNet-master
+curl -sSL https://github.com/v2ray/v2ray-core/releases/download/v3.19/v2ray-linux-64.zip -o new.zip
+unzip new.zip
+cd  v2ray-v3.19-linux-64
 
-python2 zeronet.py  --tor disable --ui_ip "*"  --ui_port $PORT --ui_password $PASS
-
-else
-
-curl -sSL https://github.com/HelloZeroNet/ZeroNet/archive/master.tar.gz -o new.tar.gz
-tar -zxvf new.tar.gz
-cd Zero*
-mv  ./plugins/disabled-UiPassword ./plugins/UiPassword
-python2 zeronet.py  --tor disable --ui_ip "*"  --ui_port $PORT --ui_password $PASS
-fi
 
 while :; do sleep 31104000 ; done
